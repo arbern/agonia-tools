@@ -26,12 +26,14 @@ export class MainMapComponent implements OnInit {
 
  public myfunction(event : any){
    let element = event.target;
-   this.eo = - event.offsetX+10;
+   // 24 px przesuniecia w poziomie, jedno pole to 8px
+   // jest 4 krotnie pomniejszony 2 px to 8px
+   this.eo = - event.offsetX+6+40;
    this.ew = element.width
-   this.eoy = - event.offsetY+10;
+   this.eoy = - event.offsetY+40;
    this.eh = element.height
-   this.background_position_x = ''+this.eo *7 +'px';
-   this.background_position_y = ''+this.eoy* 7 +'px';
+   this.background_position_x = ''+this.eo *8 +'px';
+   this.background_position_y = ''+this.eoy* 8 +'px';
    
  // alert(" eoy:"+eoy+" eh:"+eh);
   }
